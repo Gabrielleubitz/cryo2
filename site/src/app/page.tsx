@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import MachineCanvas from "@/components/MachineCanvas";
 import SessionScrub from "@/components/SessionScrub";
 import Testimonials from "@/components/Testimonials";
+import Safety from "@/components/Safety";
 import { Faq, SiteFooter, Visit } from "@/components/Footer";
 import {
   Benefits,
@@ -90,6 +91,7 @@ export default function Home() {
         <WhoWeServe />
         <Owners />
         <Faq />
+        <Safety />
         <Visit />
       </main>
       <SiteFooter />

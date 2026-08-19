@@ -24,7 +24,7 @@ const BEATS = [
     at: 0.04,
     clock: "0:00",
     title: "Step in.",
-    body: "You stay fully clothed in shorts, a tee and socks. No water, no nitrogen, no shock — just dry, still cold.",
+    body: "Dry skin, dry clothes, jewelry off. Knee-high socks, gloves, slippers, ear protection and a mask. One person in the chamber.",
   },
   {
     at: 0.3,

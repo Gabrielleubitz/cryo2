@@ -127,6 +127,40 @@
   .hairline {
     border-top: 1px solid var(--color-ink-line);
   }
+
+  .safety-ticker {
+    overflow: hidden;
+  }
+  .safety-ticker-track {
+    display: flex;
+    width: max-content;
+    gap: 2.5rem;
+    animation: safety-ticker 28s linear infinite;
+  }
+  .safety-ticker:hover .safety-ticker-track {
+    animation-play-state: paused;
+  }
+  .safety-ticker-item {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-frost-dim);
+    white-space: nowrap;
+  }
+  .safety-ticker-item span {
+    color: var(--color-brand-bright);
+    margin-right: 0.55rem;
+  }
+}
+
+@keyframes safety-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* The canvas sections are pure enhancement — everything below collapses to a

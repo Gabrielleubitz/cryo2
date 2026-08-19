@@ -147,6 +147,7 @@ export function SiteFooter() {
     { href: "/about", label: "About" },
     { href: "/packages", label: "Packages" },
     { href: "/faq", label: "FAQs" },
+    { href: "/#safety", label: "Safety" },
     { href: "/contact", label: "Contact" },
     { href: "/client-agreement", label: "Client agreement" },
     { href: "/privacy", label: "Privacy" },

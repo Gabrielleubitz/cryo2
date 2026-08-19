@@ -50,7 +50,10 @@ export const PACKAGES = [
       { qty: "5 sessions", price: 75, strike: null },
       { qty: "10 sessions", price: 100, strike: null },
     ],
-    includes: ["Team recovery sessions welcome", "Gloves and slippers provided"],
+    includes: [
+      "Team recovery sessions welcome",
+      "Gloves, slippers, ear protection and mask provided",
+    ],
     featured: false,
   },
   {
@@ -65,7 +68,10 @@ export const PACKAGES = [
       { qty: "5 sessions", price: 125, strike: null },
       { qty: "10 sessions", price: 200, strike: null },
     ],
-    includes: ["Best value on 10-packs", "Gloves and slippers provided"],
+    includes: [
+      "Best value on 10-packs",
+      "Gloves, slippers, ear protection and mask provided",
+    ],
     featured: true,
   },
   {
@@ -77,7 +83,7 @@ export const PACKAGES = [
     unlimited: null,
     sessions: [{ qty: "3-minute session", price: 25, strike: 30 }],
     includes: [
-      "Discounted every day, no restrictions",
+      "Discounted every visit",
       "Walk in on or off shift",
       "Ask about multi-session rates",
     ],
@@ -117,10 +123,54 @@ export const BENEFITS = [
   },
 ] as const;
 
+/**
+ * Chamber rules, required attire and contraindications — one source, used by
+ * the safety section, the FAQs, and the session copy. These match the clinic's
+ * posted safety board (dry skin, one person, jewellery off; WBCT kit; not for
+ * under-12s, heart or respiratory disease, open wounds or pregnancy).
+ */
+export const SAFETY = {
+  rules: [
+    {
+      id: "dry-skin",
+      title: "Dry skin",
+      body: "No water, lotion or sweat on your skin when you step in.",
+    },
+    {
+      id: "one",
+      title: "One person in the chamber",
+      body: "The cryo:one+ is a single-person walk-in. An attendant stays outside the whole time.",
+    },
+    {
+      id: "jewelry",
+      title: "Remove all jewelry",
+      body: "Metal holds the cold. Rings, chains, watches, piercings — all of it comes off.",
+    },
+  ],
+  attire: [
+    { id: "underwear", title: "Underwear" },
+    { id: "top", title: "Cotton top for women" },
+    { id: "socks", title: "Knee-high socks", note: "Above the calf" },
+    { id: "slippers", title: "Warm slippers" },
+    { id: "gloves", title: "Gloves" },
+    { id: "ears", title: "Ear protection" },
+    { id: "mask", title: "Protective mask", note: "Required for whole-body sessions" },
+  ],
+  dryClothes: "All clothes must be dry.",
+  provided: "We supply gloves, warm slippers, ear protection and a mask.",
+  contraindications: [
+    { id: "age", title: "Children under 12" },
+    { id: "heart", title: "Heart problems" },
+    { id: "respiratory", title: "Respiratory disease" },
+    { id: "wounds", title: "Open wounds" },
+    { id: "pregnancy", title: "Pregnancy" },
+  ],
+} as const;
+
 export const FAQS = [
   {
     q: "What actually happens in a session?",
-    a: "You change into shorts, a t-shirt or sports bra, socks, and the gloves and slippers we provide. You step into the chamber, an attendant stays with you the whole time, and you walk out three minutes later. That's it.",
+    a: "You change into underwear, knee-high socks, and a cotton top if you're a woman. We provide gloves, warm slippers, ear protection and a protective mask. Skin and clothes must be completely dry, all jewelry off, one person in the chamber. An attendant stays with you the whole time, and you walk out three minutes later.",
   },
   {
     q: "Is this the kind with liquid nitrogen?",
@@ -132,7 +182,7 @@ export const FAQS = [
   },
   {
     q: "What should I wear?",
-    a: "Shorts, and a t-shirt or sports bra, plus socks. We supply gloves and slippers. Come dry — no lotions, no jewelry, no damp clothing.",
+    a: "Underwear, knee-high socks (above the calf), gloves and warm slippers. Women wear a cotton top. Ear protection and a protective mask are required for whole-body sessions. We supply the gloves, slippers, ear protection and mask. Everything must be dry — no lotions, no jewelry, no damp clothing.",
   },
   {
     q: "Do I need an appointment?",
@@ -148,6 +198,6 @@ export const FAQS = [
   },
   {
     q: "Who shouldn't use cryotherapy?",
-    a: "If you're pregnant, or have uncontrolled high blood pressure, a serious heart condition, Raynaud's, or cold allergies, talk to your doctor first. We'll go through a short health screening on your first visit.",
+    a: "Whole-body cryotherapy is not for children under 12, anyone who is pregnant, or anyone with heart problems, respiratory disease, or open wounds. If you have Raynaud's, a cold allergy, or you're unsure, talk to your doctor first. We'll go through a short health screening on your first visit.",
   },
 ] as const;
