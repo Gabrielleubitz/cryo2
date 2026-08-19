@@ -2,6 +2,9 @@ node_modules/
 .next/
 .DS_Store
 *.log
+.vercel
+
+# Original media pulled from the live WordPress site (~285 MB).
 
 # Original media pulled from the live WordPress site (~285 MB).
 # Everything the site actually serves is generated from these into

@@ -22,6 +22,27 @@ npm install
 npm run dev          # http://localhost:3000
 ```
 
+## Deploy on Vercel
+
+The Next.js app lives in `site/`, not the repo root. In the Vercel project:
+
+1. Import [Gabrielleubitz/cryo2](https://github.com/Gabrielleubitz/cryo2).
+2. Set **Root Directory** to `site`. Framework should detect as Next.js.
+3. Leave the build command as `next build` (from `package.json`). Node is pinned
+   to 22 via `engines` and `site/.nvmrc`.
+4. No environment variables are required.
+5. After the first deploy succeeds, add `cryotherapyrejuvenate.com` (and `www`)
+   under **Domains**. Point the DNS at Vercel, and set the apex as the primary
+   so `www` 301s to it.
+
+`site/vercel.json` skips Playwright's browser download on install (those
+browsers are only for local screenshot scripts) and pins serverless work to
+`iad1`, the closest Vercel region to Dickson City. Production headers, WordPress
+slug redirects, and cache policy live in `site/next.config.ts`.
+
+A preview URL is issued for every push to `main` and every pull request; the
+production domain updates when `main` builds.
+
 ## Asset pipeline
 
 Generated assets are committed under `site/public/`, so a normal build needs no

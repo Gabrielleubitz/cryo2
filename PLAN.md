@@ -358,6 +358,5 @@ screenshot pass steps over.
 - Port the client agreement and privacy policy text into their stub routes.
 - Confirm the Facebook and Instagram handles in `business.ts` (guessed from the
   legacy footer, which linked them without visible URLs).
-- Replace the placeholder social/OG image if you want something other than the
-  chamber hero.
-- Deploy to Vercel and re-run Lighthouse against the live origin.
+- Deploy: Vercel Root Directory is `site`. After DNS, re-run Lighthouse against
+  the live origin.

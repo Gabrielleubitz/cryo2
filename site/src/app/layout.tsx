@@ -50,7 +50,6 @@ export const metadata: Metadata = {
     title: "Whole-Body Cryotherapy in Dickson City, PA | Cryotherapy Rejuvenate",
     description:
       "Three minutes at −220°F. Fully electric whole-body cryotherapy — no liquid nitrogen — in Dickson City, PA.",
-    images: [{ url: "/img/chamber-hero-1920.webp", width: 1920, height: 1080 }],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
