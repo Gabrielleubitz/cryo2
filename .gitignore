@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.DS_Store
+*.log
+
+# Original media pulled from the live WordPress site (~285 MB).
+# Everything the site actually serves is generated from these into
+# site/public/ and committed, so a clean checkout builds without them.
+# Re-fetch with: research/fetch_assets.sh assets-src
+assets-src/
